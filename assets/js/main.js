@@ -1,3 +1,30 @@
-const menuButton=document.querySelector('.menu-button');const nav=document.querySelector('.site-nav');if(menuButton&&nav){menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menuButton.setAttribute('aria-expanded','false')}));}
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.15});document.querySelectorAll('[data-reveal]').forEach(el=>observer.observe(el));
-document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+const menuButton = document.querySelector(".menu-button");
+const nav = document.querySelector(".site-nav");
+if (menuButton && nav) {
+  menuButton.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+  nav.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }),
+  );
+}
+const observer = new IntersectionObserver(
+  (entries) =>
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    }),
+  { threshold: 0.15 },
+);
+document
+  .querySelectorAll("[data-reveal]")
+  .forEach((el) => observer.observe(el));
+document
+  .querySelectorAll("[data-year]")
+  .forEach((el) => (el.textContent = new Date().getFullYear()));
