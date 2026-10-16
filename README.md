@@ -1,40 +1,28 @@
 # Habbah Innovations Limited website
 
-A static multi-page company profile built for GitHub Pages.
+A static GitHub Pages draft for Habbah Innovations Limited. The homepage presents all seven businesses named in the client-provided company profile, and each business has its own page.
 
 ## Pages
 
-- Home (`index.html`)
-- About (`pages/about.html`)
-- Business Activities (`pages/activities.html`)
-- Contact (`pages/contact.html`)
-- Custom 404 (`404.html`)
+- `index.html` — group homepage and business directory
+- `pages/about.html` — mission, vision and values
+- `pages/contact.html` — direct email enquiry
+- `pages/restaurant-catering.html`
+- `pages/maternity-store.html`
+- `pages/medicare.html`
+- `pages/esca-baby-porridge.html`
+- `pages/haled-program.html`
+- `pages/primary-school.html`
+- `pages/medical-training.html`
 
-## Photography and licensing
+`pages/activities.html` redirects visitors from the former rice-only activities page to the business directory.
 
-The photographs are contextual stock images. They do **not** depict Habbah Innovations Limited's facilities, staff, products or operations.
+## Source and maintenance
 
-All four photographs were downloaded from Pexels and are used under the [Pexels licence](https://www.pexels.com/license/), which permits free commercial use and modification. Attribution is included here for traceability.
+The business names and descriptions are based on `Profile Habbah Innovations Limited_084049 (1).docx`, supplied by the client. The email address was retained from the previous website. The site does not claim specific clinic locations, school courses, food ingredients, accreditations or opening hours, because those details were not supplied.
 
-| Local file | Photographer | Source |
-|---|---|---|
-| `rice-closeup.jpg` | Polina Tankilevitch | [Rice in Close Up Photography](https://www.pexels.com/photo/rice-in-close-up-photography-4187621/) |
-| `brown-rice-texture.jpg` | Suki Lee | [Rice in Close Up](https://www.pexels.com/photo/rice-in-close-up-14197541/) |
-| `rice-scoop.jpg` | Suki Lee | [Rice Grains on Measuring Wooden Scoop](https://www.pexels.com/photo/close-up-photo-of-rice-grains-on-measuring-wooden-scoop-13362298/) |
-| `rice-plant.jpg` | นิรมล บุญเทพ | [Close-Up of Rice Plant in Green Field](https://www.pexels.com/photo/close-up-of-rice-plant-in-green-field-35245104/) |
+Edit `scripts/build-pages.cjs` for page content, then run `node scripts/build-pages.cjs` to regenerate the static HTML. Styling is in `assets/css/site-v2.css`; interaction code is in `assets/js/site-v2.js`.
 
-## Private handover: confirmations still needed
+The older rice photographs remain in `assets/images/` for provenance but are not displayed in this draft. They are contextual Pexels stock, not Habbah facilities, staff, products or operations. See the repository history for their source links and licensing notes.
 
-Before treating this profile as the company's final public website, ask the client to confirm:
-
-- Habbah's current primary business activity and whether the accommodation/food-service classification is still relevant.
-- The precise scope of its rice processing, milling and packaging role.
-- Current products or services, if any, that should be named publicly.
-- Whether Habbah owns or operates a facility, and any facts that may be published about it.
-- A street or postal address, business telephone number and official social channels, if these should be public.
-- Company history, approved brand assets and photographs that Habbah owns or has permission to publish.
-- Any certifications, partnerships or delivery areas before making such claims.
-
-## Local preview
-
-Run a static server from this directory, for example `python3 -m http.server 8000`, then open `http://localhost:8000`.
+Before final client approval, confirm each venture's current operating status, contact details, location, approved photography and any regulatory claims.
