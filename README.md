@@ -1,10 +1,11 @@
-# Habbah Innovations Limited website
+﻿# Habbah Innovations Limited website
 
-A static GitHub Pages draft for Habbah Innovations Limited. The homepage presents all seven businesses named in the client-provided company profile, and each business has its own page.
+A static GitHub Pages draft for Habbah Innovations Limited. The homepage introduces the company. A separate business directory presents seven vertical image cards, and each business has its own page.
 
 ## Pages
 
-- `index.html` — group homepage and business directory
+- `index.html` — company homepage
+- `pages/businesses.html` — illustrated business directory
 - `pages/about.html` — mission, vision and values
 - `pages/contact.html` — direct email enquiry
 - `pages/restaurant-catering.html`
@@ -15,7 +16,7 @@ A static GitHub Pages draft for Habbah Innovations Limited. The homepage present
 - `pages/primary-school.html`
 - `pages/medical-training.html`
 
-`pages/activities.html` redirects visitors from the former rice-only activities page to the business directory.
+`pages/activities.html` redirects visitors from the former activities page to the business directory.
 
 ## Source and maintenance
 
@@ -23,7 +24,7 @@ The business names and descriptions are based on `Profile Habbah Innovations Lim
 
 Edit `scripts/build-pages.cjs` for page content, then run `node scripts/build-pages.cjs` to regenerate the static HTML. Styling is in `assets/css/site-v2.css`; interaction code is in `assets/js/site-v2.js`.
 
-The four `habbah-*.jpg` photos are contextual Unsplash stock used as illustrative imagery, not verified Habbah facilities, staff, products or operations. The legacy rice photographs are retained for provenance; `brown-rice-texture.jpg` is used as contextual imagery for agro-processing. See the repository history for the legacy photo source notes.
+The `habbah-*-ug.jpg` images are AI-generated illustrative scenes set in Uganda and featuring Black Ugandan people. They are visual concepts, not documentary photos of Habbah facilities, staff, customers or products. Older contextual stock images remain in `assets/images/` for provenance; the business directory and individual venture pages use the generated image set.
 
 ## Deployment
 
