@@ -23,6 +23,10 @@ The business names and descriptions are based on `Profile Habbah Innovations Lim
 
 Edit `scripts/build-pages.cjs` for page content, then run `node scripts/build-pages.cjs` to regenerate the static HTML. Styling is in `assets/css/site-v2.css`; interaction code is in `assets/js/site-v2.js`.
 
-The older rice photographs remain in `assets/images/` for provenance but are not displayed in this draft. They are contextual Pexels stock, not Habbah facilities, staff, products or operations. See the repository history for their source links and licensing notes.
+The four `habbah-*.jpg` photos are contextual Unsplash stock used as illustrative imagery, not verified Habbah facilities, staff, products or operations. The legacy rice photographs are retained for provenance; `brown-rice-texture.jpg` is used as contextual imagery for agro-processing. See the repository history for the legacy photo source notes.
+
+## Deployment
+
+The site is configured as a static GitHub Pages draft. After pushing changes to the repository's `main` branch, GitHub Pages serves the site from the configured publishing source. The current workspace can regenerate the pages with `node scripts/build-pages.cjs`.
 
 Before final client approval, confirm each venture's current operating status, contact details, location, approved photography and any regulatory claims.

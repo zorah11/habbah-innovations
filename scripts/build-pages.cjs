@@ -82,6 +82,16 @@ const ventures = [
   },
 ];
 
+const ventureImages = {
+  'restaurant-catering': ['habbah-hospitality.jpg', 'A welcoming restaurant dining room'],
+  'maternity-store': ['habbah-community.jpg', 'People sharing ideas around a table'],
+  medicare: ['habbah-health.jpg', 'A healthcare professional'],
+  'esca-baby-porridge': ['brown-rice-texture.jpg', 'Agricultural grains'],
+  'haled-program': ['habbah-community.jpg', 'A collaborative workshop'],
+  'primary-school': ['habbah-learning.jpg', 'Students learning in a classroom'],
+  'medical-training': ['habbah-health.jpg', 'A healthcare professional'],
+};
+
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const pageLink = (prefix, slug) => `${prefix}pages/${slug}.html`;
 
@@ -126,7 +136,7 @@ const home = `<section class="hero"><div class="wrap hero-grid"><div class="hero
   <p class="eyebrow">Habbah Innovations Limited / Uganda</p><h1>Different ventures.<br><em>One shared purpose.</em></h1>
   <p class="hero-lead">From family care and healthcare to food, learning and youth development, Habbah brings its businesses together around everyday needs and long-term opportunity.</p>
   <a class="text-link" href="#businesses">Explore the businesses <span aria-hidden="true">↘</span></a>
-</div><div class="hero-map" aria-label="Habbah works across food, care, health, agriculture, leadership and education"><div class="hero-map-inner">
+</div><div class="hero-map" role="img" aria-label="A collaborative group working around a table"><img src="assets/images/habbah-community.jpg" alt="" fetchpriority="high"><div class="hero-map-inner">
   <span>Food</span><span>Care</span><span>Health</span><b>H.</b><span>Growth</span><span>Learning</span><span>Leadership</span>
 </div><p>One connected company<br>Seven distinct businesses</p></div></div></section>
 <section class="opening-note"><div class="wrap opening-grid"><span class="section-index">The group at a glance</span><p>Habbah Innovations Limited is a multi-disciplinary enterprise working across the services that help communities live, learn and grow.</p></div></section>
@@ -146,7 +156,8 @@ const contact = `<section class="interior-hero"><div class="wrap interior-grid">
 
 function ventureBody(venture, index) {
   const next = ventures[(index + 1) % ventures.length];
-  return `<section class="venture-hero tone-${venture.tone}"><div class="wrap venture-hero-grid"><div><a class="back-link" href="../index.html#businesses">← All businesses</a><p class="eyebrow">${escapeHtml(venture.sector)} / ${String(index + 1).padStart(2, '0')} of 07</p><h1>${escapeHtml(venture.name)}</h1><p class="venture-summary">${escapeHtml(venture.summary)}</p></div><div class="venture-art" aria-hidden="true"><span>${venture.mark}</span><i></i><b>Habbah<br>Innovations</b></div></div></section>
+  const [image, alt] = ventureImages[venture.slug];
+  return `<section class="venture-hero tone-${venture.tone}"><div class="wrap venture-hero-grid"><div><a class="back-link" href="../index.html#businesses">← All businesses</a><p class="eyebrow">${escapeHtml(venture.sector)} / ${String(index + 1).padStart(2, '0')} of 07</p><h1>${escapeHtml(venture.name)}</h1><p class="venture-summary">${escapeHtml(venture.summary)}</p></div><figure class="venture-photo"><img src="../assets/images/${image}" alt="${escapeHtml(alt)}" loading="lazy"><figcaption>Illustrative photograph</figcaption></figure></div></section>
   <section class="section venture-content"><div class="wrap statement-grid"><span class="section-index">The focus</span><div><h2>${escapeHtml(venture.lead)}</h2><p>Contact Habbah for current information about this business.</p></div></div></section>
   <section class="section venture-points"><div class="wrap"><div class="section-heading"><div><span class="section-index">Within this business</span><h2>Areas of focus.</h2></div></div><div class="value-list three">${venture.points.map(([heading, text], pointIndex) => `<article><span>${String(pointIndex + 1).padStart(2, '0')}</span><h3>${escapeHtml(heading)}</h3><p>${escapeHtml(text)}</p></article>`).join('')}</div></div></section>
   <section class="venture-connection"><div class="wrap connection-grid"><span class="section-index">Part of the Habbah family</span><p>One of seven ventures working across everyday needs and long-term opportunity.</p><a class="light-link" href="../pages/about.html">About the company <span aria-hidden="true">↗</span></a></div></section>
