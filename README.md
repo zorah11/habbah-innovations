@@ -1,6 +1,6 @@
-﻿# Habbah Innovations Limited website
+# Habbah Innovations Limited website
 
-A static GitHub Pages draft for Habbah Innovations Limited. The homepage introduces the company. A separate business directory presents seven vertical image cards, and each business has its own page.
+A static GitHub Pages draft for Habbah Innovations Limited. The homepage introduces the company and presents seven vertical image cards. A separate business directory provides the same cards, and each business has its own page.
 
 ## Pages
 

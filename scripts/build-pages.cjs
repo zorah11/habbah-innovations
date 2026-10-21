@@ -128,13 +128,18 @@ function document(title, description, body, active, prefix = '') {
 <script src="${prefix}assets/js/site-v2.js?v=20261016"></script></body></html>\n`;
 }
 
-const directory = ventures.map((venture, index) => {
+function renderDirectory(linkPrefix, imagePrefix) {
+  return ventures.map((venture, index) => {
   const [image] = ventureImages[venture.slug];
-  return `<a class="business-card tone-${venture.tone}" href="${escapeHtml(venture.slug)}.html" aria-label="Explore ${escapeHtml(venture.name)}">
-    <span class="business-card-photo"><img src="../assets/images/${escapeHtml(image)}" alt="" loading="lazy"><span>Illustrative image</span></span>
+  return `<a class="business-card tone-${venture.tone}" href="${linkPrefix}${escapeHtml(venture.slug)}.html" aria-label="Explore ${escapeHtml(venture.name)}">
+    <span class="business-card-photo"><img src="${imagePrefix}${escapeHtml(image)}" alt="" loading="lazy"><span>Illustrative image</span></span>
     <span class="business-card-body"><small>${String(index + 1).padStart(2, '0')} / ${escapeHtml(venture.sector)}</small><strong>${escapeHtml(venture.name)}</strong><span>${escapeHtml(venture.summary)}</span><b>Explore this business <i aria-hidden="true">&#8599;</i></b></span>
   </a>`;
-}).join('');
+  }).join('');
+}
+
+const directory = renderDirectory('', '../assets/images/');
+const homeDirectory = renderDirectory('pages/', 'assets/images/');
 const home = `<section class="hero"><div class="wrap hero-grid"><div class="hero-copy">
   <p class="eyebrow">Habbah Innovations Limited / Uganda</p><h1>Different ventures.<br><em>One shared purpose.</em></h1>
   <p class="hero-lead">From family care and healthcare to food, learning and youth development, Habbah brings its businesses together around everyday needs and long-term opportunity.</p>
@@ -143,7 +148,7 @@ const home = `<section class="hero"><div class="wrap hero-grid"><div class="hero
   <span>Food</span><span>Care</span><span>Health</span><b>H.</b><span>Growth</span><span>Learning</span><span>Leadership</span>
 </div><p>One connected company<br>Seven distinct businesses</p></div></div></section>
 <section class="opening-note"><div class="wrap opening-grid"><span class="section-index">The group at a glance</span><p>Habbah Innovations Limited is a multi-disciplinary enterprise working across the services that help communities live, learn and grow.</p></div></section>
-<section class="group-ventures section"><div class="wrap group-ventures-grid"><div><span class="section-index">Seven areas of work</span><h2>One group.<br>Many ways to contribute.</h2></div><div><p>Explore Habbah&#8217;s businesses across hospitality, family care, healthcare, food, youth development and education.</p><a class="button" href="pages/businesses.html">View all businesses <span aria-hidden="true">&#8599;</span></a></div></div></section>
+<section class="businesses section" id="businesses"><div class="wrap"><div class="section-heading"><div><span class="section-index">Explore Habbah</span><h2>Seven businesses.<br>Seven points of entry.</h2></div><p>Choose a business to learn about its focus and how it fits within the wider Habbah family.</p></div><div class="business-directory">${homeDirectory}</div><p class="directory-more"><a class="text-link dark-link" href="pages/businesses.html">Open the business directory <span aria-hidden="true">&#8599;</span></a></p></div></section>
 <section class="purpose-band"><div class="wrap purpose-grid"><span class="section-index">Our purpose</span><div><blockquote>Enhancing quality of life through trusted services under one umbrella.</blockquote><p>Habbah&#8217;s mission spans health, education, hospitality and development. The businesses are distinct; the commitment to quality, integrity and community is shared.</p><a class="light-link" href="pages/about.html">Read about Habbah <span aria-hidden="true">&#8599;</span></a></div></div></section>
 <section class="closing section"><div class="wrap closing-grid"><div><span class="section-index">Start a conversation</span><h2>Interested in one of our businesses?</h2></div><div><p>Tell us which Habbah venture you would like to discuss, and we&#8217;ll take the conversation from there.</p><a class="button" href="pages/contact.html">Contact Habbah <span aria-hidden="true">&#8599;</span></a></div></div></section>`;
 
