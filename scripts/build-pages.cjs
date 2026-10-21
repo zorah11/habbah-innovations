@@ -123,7 +123,7 @@ function document(title, description, body, active, prefix = '') {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#102d36"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}">
-  <link rel="icon" href="${prefix}assets/images/favicon.svg"><link rel="stylesheet" href="${prefix}assets/css/site-v2.css?v=20261021">
+  <link rel="icon" href="${prefix}assets/images/favicon.svg"><link rel="stylesheet" href="${prefix}assets/css/site-v2.css?v=20261021-mobile-hero">
 </head><body>${header(prefix, active)}<main id="main">${body}</main>${footer(prefix)}
 <script src="${prefix}assets/js/site-v2.js?v=20261016"></script></body></html>\n`;
 }

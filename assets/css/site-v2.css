@@ -175,3 +175,4 @@ h3{font-size:clamp(1.55rem,2.1vw,2.1rem);line-height:1.1}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-nav,.business-row,.business-arrow,.button,.text-link span,.light-link span{transition:none}}
 @media(max-width:1050px){.business-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.group-ventures-grid{grid-template-columns:1fr .85fr;gap:6vw}}
 @media(max-width:600px){.business-directory{grid-template-columns:1fr;gap:20px}.business-card-photo{aspect-ratio:1.5}.business-card-body{padding:22px}.group-ventures-grid{grid-template-columns:1fr;gap:28px}.group-ventures-grid h2{font-size:clamp(2.8rem,10vw,4rem)}}
+@media(max-width:820px){.hero-map{grid-row:1}.hero-copy{grid-row:2}}
