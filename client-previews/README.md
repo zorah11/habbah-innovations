@@ -1,10 +1,8 @@
 # Client concept sites
 
-Separate static multi-page samples for prospects who asked to see a website concept:
+Each prospect has a distinct, multi-page website direction with a restrained glassmorphism system, polished sample copy, and one original hero image:
 
-- `yistam/` — Home, About, Our work and Contact.
-- `yugwi/` — Home, About, Services and Contact.
+- `yistam/` — Home, About, Our Work and Contact. The water and irrigation focus reflects public procurement and audit records; it does not claim specific completion outcomes.
+- `yugwi/` — Home, About, Services and Contact. The waste collection and cleanliness focus is a reasonable concept direction inferred from the business name and email context, since no fuller company description was supplied.
 
-These are concept previews. Copy, service lists, projects, locations, testimonials and contact details marked for confirmation must be reviewed with the businesses before a production launch. The preview folders are independently navigable and use relative links so they work on GitHub Pages under this repository.
-
-The repo is public, so these pages are publicly viewable at `/client-previews/yistam/` and `/client-previews/yugwi/`.
+Sample contact numbers and email addresses are fictional. The image on each site is an illustrative generated concept, not company photography. The public repository means both previews are publicly accessible at `/client-previews/yistam/` and `/client-previews/yugwi/`.
